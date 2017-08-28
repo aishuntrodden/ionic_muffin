@@ -1,3 +1,4 @@
+import { WelcomePage } from './../pages/welcome/welcome';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -11,7 +12,8 @@ import { GetloginProvider } from '../providers/getlogin/getlogin';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    WelcomePage
   ],
   imports: [
     BrowserModule, HttpModule,
@@ -20,7 +22,7 @@ import { GetloginProvider } from '../providers/getlogin/getlogin';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage, WelcomePage
   ],
   providers: [
     StatusBar,

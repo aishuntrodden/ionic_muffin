@@ -1,3 +1,4 @@
+import { WelcomePage } from './../welcome/welcome';
 import { GetloginProvider } from './../../providers/getlogin/getlogin';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -7,7 +8,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  welcome = WelcomePage;
   constructor(public navCtrl: NavController, public GetloginService: GetloginProvider) {
 
   }
