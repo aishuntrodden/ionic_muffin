@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx';
 
+import 'rxjs/add/operator/catch';
 /*
   Generated class for the GetloginProvider provider.
 
@@ -14,12 +16,13 @@ export class GetloginProvider {
   constructor(public http: Http) {
     console.log('Hello GetloginProvider Provider');
   }
-  getRemoteData() {
-    this.http.get('https://jsonplaceholder.typicode.com').subscribe(data => {
-      console.log(data);
+  getComments(): Observable<any> {
+    return this.http.get('http://ec2-54-198-217-196.compute-1.amazonaws.com:8000/data').map((res: Response) => res.json())
+      //...errors if any
+      .catch((error: any) => Observable.throw(error || 'Server error'));
 
-    });
+  };
 
 
-  }
 }
+
