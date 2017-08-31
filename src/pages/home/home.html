@@ -8,9 +8,20 @@
             <button ion-button (click)="loadComments()">data</button>
             <button ion-button (click)="abc()">see</button>
             <button [navPush]="welcome">welcome page</button>
+
         </p>
+        <ion-content padding class="getting-started">
+
+            <button primary (click)="presentAlert()">Alert</button>
 
 
+            <div class="list">
+
+                <a class="item" href="#" onclick="window.open('http://ec2-54-198-217-196.compute-1.amazonaws.com:8000/authe', '_system', 'location=yes'); return false;">
+                    Open a Google+ Client or Browser
+                </a>
+            </div>
+        </ion-content>
         <div class="container">
 
         </div>
