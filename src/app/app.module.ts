@@ -1,3 +1,4 @@
+import { ChatPage } from './../pages/chat/chat';
 import { WelcomePage } from './../pages/welcome/welcome';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -9,11 +10,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GetloginProvider } from '../providers/getlogin/getlogin';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    WelcomePage
+    WelcomePage, ChatPage
   ],
   imports: [
     BrowserModule, HttpModule,
@@ -22,7 +24,7 @@ import { GetloginProvider } from '../providers/getlogin/getlogin';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage, WelcomePage
+    HomePage, WelcomePage, ChatPage
   ],
   providers: [
     StatusBar,

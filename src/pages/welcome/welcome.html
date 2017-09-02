@@ -1,9 +1,3 @@
-<!--
-  Generated template for the WelcomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
     <ion-navbar>
@@ -16,8 +10,55 @@
 <ion-content padding>
     <ion-list>
         <ion-item>
-            <ion-label>dual, step=3, snaps, </ion-label>
-            <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="55" max="75" step="3" snaps="true"></ion-range>
+            <ion-label>step=100, snaps, </ion-label>
+            <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
+
         </ion-item>
+        <ion-item>
+
+
+            <ion-label>dual, step=0.5, snaps, </ion-label>
+            <ion-range dualKnobs="true" pin="true" [(ngModel)]="knobValues" min="0" max="24" step="0.5" snaps="false"></ion-range>
+
+
+        </ion-item>
+        <div *ngIf="knobValues.lower<12">the start time is:{{knobValues.lower}}am</div>
+        <div *ngIf="knobValues.lower>12">the start time is:{{knobValues.lower - 12}}pm </div>
+        <div *ngIf="knobValues.upper>12">the end time is:{{knobValues.upper - 12}}pm</div>
+        {{knobValues.upper}}am
+        <ion-item>
+            <ion-label>M</ion-label>
+            <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>T</ion-label>
+            <ion-checkbox [(ngModel)]="Tuesday"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>W</ion-label>
+            <ion-checkbox [(ngModel)]="Thurs"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Thurs</ion-label>
+            <ion-checkbox [(ngModel)]="Fri"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Fri</ion-label>
+            <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Sat</ion-label>
+            <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Sun</ion-label>
+            <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+        </ion-item>
+
+
     </ion-list>
+
+
+
+
 </ion-content>

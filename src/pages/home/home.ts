@@ -1,8 +1,10 @@
+import { ChatPage } from './../chat/chat';
 import { WelcomePage } from './../welcome/welcome';
 import { GetloginProvider } from './../../providers/getlogin/getlogin';
 import { Component, OnInit } from '@angular/core';
 import { NavController, } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -29,7 +31,7 @@ export class HomePage {
       buttons: ['Dismiss']
     });
     alert.present();
-    window.location.href = 'http://ec2-54-198-217-196.compute-1.amazonaws.com:8000/authe';
+    window.location.href = 'http://ec2-52-39-241-144.us-west-2.compute.amazonaws.com:9000//authe';
     this.ionViewWillLeave();
   }
   ionViewWillEnter() {
@@ -89,6 +91,11 @@ export class HomePage {
 
     };
     console.log(this.body);
+    this.logincheck();
   }
-
+  logincheck() {
+    if (this.body.email) {
+      this.send();
+    }
+  }
 }
