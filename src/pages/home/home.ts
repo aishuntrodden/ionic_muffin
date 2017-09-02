@@ -4,13 +4,13 @@ import { GetloginProvider } from './../../providers/getlogin/getlogin';
 import { Component, OnInit } from '@angular/core';
 import { NavController, } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
   welcome = WelcomePage;
+  chat = ChatPage;
   results: any
   ngOnOnit() {
 

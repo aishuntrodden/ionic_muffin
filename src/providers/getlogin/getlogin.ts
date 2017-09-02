@@ -17,7 +17,7 @@ export class GetloginProvider {
     console.log('Hello GetloginProvider Provider');
   }
   getComments(): Observable<any> {
-    return this.http.get('http://ec2-52-39-241-144.us-west-2.compute.amazonaws.com:9000/data').map((res: Response) => res.json())
+    return this.http.get('http://7403cf88.ngrok.io/data').map((res: Response) => res.json())
       //...errors if any
       .catch((error: any) => Observable.throw(error || 'Server error'));
 

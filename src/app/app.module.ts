@@ -9,7 +9,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GetloginProvider } from '../providers/getlogin/getlogin';
-
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import { GetloginProvider } from '../providers/getlogin/getlogin';
   providers: [
     StatusBar,
     SplashScreen,
+    SpeechRecognition,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     GetloginProvider
   ]
